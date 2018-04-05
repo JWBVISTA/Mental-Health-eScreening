@@ -1,10 +1,10 @@
-USE [SDC-PROD]
+USE [dev-prod]
 GO
  IF NOT EXISTS(SELECT * FROM sys.schemas WHERE [name] = N'dbo')      
      EXEC (N'CREATE SCHEMA dbo')                                   
  GO                                                               
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'assessment_appoint'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -67,7 +67,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'assessment_formula'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -133,7 +133,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'assessment_status'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -196,7 +196,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'assessment_var_children'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -260,7 +260,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'assessment_variable'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -328,7 +328,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'assessment_variable_column'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -392,7 +392,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'assessment_variable_type'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -456,7 +456,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'battery'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -527,7 +527,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'battery_survey'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -590,7 +590,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'battery_template'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -654,7 +654,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'calculation_type'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -717,7 +717,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'clinic'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -781,7 +781,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'clinic_program'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -844,7 +844,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'clinic_survey'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -907,7 +907,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'clinical_note'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -971,7 +971,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'clinical_reminder'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -1037,7 +1037,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'clinical_reminder_survey'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -1100,7 +1100,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'consult'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -1164,7 +1164,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'dashboard_alert'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -1229,7 +1229,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'dashboard_alert_type'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -1291,7 +1291,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'dialog_prompt'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -1354,7 +1354,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'event'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -1419,7 +1419,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'event_type'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -1482,7 +1482,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'export_log'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -1555,7 +1555,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'export_log_audit'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -1620,7 +1620,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'export_type'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -1683,7 +1683,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'exportdata_filter_options'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -1748,7 +1748,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'health_factor'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -1820,7 +1820,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'health_factor_dialog_prompt'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -1884,7 +1884,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'measure'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -1980,7 +1980,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'measure_answer'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -2059,7 +2059,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'measure_answer_validation'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -2126,7 +2126,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'measure_type'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -2189,7 +2189,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'measure_validation'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -2256,7 +2256,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'note_title'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -2320,7 +2320,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'note_title_map'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -2383,7 +2383,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'person_type'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -2446,7 +2446,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'program'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -2516,7 +2516,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'program_battery'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -2580,7 +2580,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'program_survey'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -2643,7 +2643,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'role'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -2706,7 +2706,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'rule'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -2771,7 +2771,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'rule_assessment_variable'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -2835,7 +2835,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'rule_event'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -2899,7 +2899,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'survey'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -2983,7 +2983,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'survey_attempt'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -3048,7 +3048,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'survey_measure_response'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -3129,7 +3129,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'survey_page'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -3195,7 +3195,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'survey_page_measure'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -3266,7 +3266,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'survey_score_interval'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -3338,7 +3338,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'survey_section'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -3403,7 +3403,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'survey_template'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -3467,7 +3467,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'system_property'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -3534,7 +3534,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'template'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -3610,7 +3610,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'template_type'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -3674,7 +3674,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'user'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -3761,7 +3761,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'user_clinic'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -3825,7 +3825,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'user_program'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -3889,7 +3889,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'user_status'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -3952,7 +3952,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'validation'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -4017,7 +4017,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'variable_template'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -4082,7 +4082,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'veteran'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -4170,7 +4170,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'veteran_assessment'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -4259,7 +4259,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'veteran_assessment_action'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -4322,7 +4322,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'veteran_assessment_audit_log'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -4391,7 +4391,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'veteran_assessment_consult'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -4455,7 +4455,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'veteran_assessment_dashboard_alert'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -4519,7 +4519,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'veteran_assessment_event'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -4582,7 +4582,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'veteran_assessment_health_factor'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -4646,7 +4646,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'veteran_assessment_log'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -4716,7 +4716,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'veteran_assessment_measure_visibility'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -4787,7 +4787,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'veteran_assessment_note'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -4850,7 +4850,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'veteran_assessment_question_presence'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -4913,7 +4913,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'veteran_assessment_survey'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -4992,7 +4992,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'veteran_assessment_survey_score'  AND sc.name=N'dbo'  AND type in (N'U'))
 BEGIN
@@ -5061,7 +5061,7 @@ BEGIN CATCH
 END CATCH
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_assessment_appoint_vet_assessment_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[assessment_appoint] DROP CONSTRAINT [PK_assessment_appoint_vet_assessment_id]
@@ -5077,7 +5077,7 @@ ALTER TABLE [dbo].[assessment_appoint]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_assessment_formula_assessment_formula_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[assessment_formula] DROP CONSTRAINT [PK_assessment_formula_assessment_formula_id]
@@ -5093,7 +5093,7 @@ ALTER TABLE [dbo].[assessment_formula]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_assessment_status_assessment_status_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[assessment_status] DROP CONSTRAINT [PK_assessment_status_assessment_status_id]
@@ -5109,7 +5109,7 @@ ALTER TABLE [dbo].[assessment_status]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_assessment_var_children_assessment_var_children_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[assessment_var_children] DROP CONSTRAINT [PK_assessment_var_children_assessment_var_children_id]
@@ -5125,7 +5125,7 @@ ALTER TABLE [dbo].[assessment_var_children]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_assessment_variable_assessment_variable_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[assessment_variable] DROP CONSTRAINT [PK_assessment_variable_assessment_variable_id]
@@ -5141,7 +5141,7 @@ ALTER TABLE [dbo].[assessment_variable]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_assessment_variable_column_assessment_variable_column_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[assessment_variable_column] DROP CONSTRAINT [PK_assessment_variable_column_assessment_variable_column_id]
@@ -5157,7 +5157,7 @@ ALTER TABLE [dbo].[assessment_variable_column]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_assessment_variable_type_assessment_variable_type_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[assessment_variable_type] DROP CONSTRAINT [PK_assessment_variable_type_assessment_variable_type_id]
@@ -5173,7 +5173,7 @@ ALTER TABLE [dbo].[assessment_variable_type]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_battery_battery_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[battery] DROP CONSTRAINT [PK_battery_battery_id]
@@ -5189,7 +5189,7 @@ ALTER TABLE [dbo].[battery]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_battery_survey_battery_survey_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[battery_survey] DROP CONSTRAINT [PK_battery_survey_battery_survey_id]
@@ -5205,7 +5205,7 @@ ALTER TABLE [dbo].[battery_survey]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_battery_template_battery_template_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[battery_template] DROP CONSTRAINT [PK_battery_template_battery_template_id]
@@ -5221,7 +5221,7 @@ ALTER TABLE [dbo].[battery_template]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_calculation_type_calculation_type_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[calculation_type] DROP CONSTRAINT [PK_calculation_type_calculation_type_id]
@@ -5237,7 +5237,7 @@ ALTER TABLE [dbo].[calculation_type]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_clinic_clinic_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[clinic] DROP CONSTRAINT [PK_clinic_clinic_id]
@@ -5253,7 +5253,7 @@ ALTER TABLE [dbo].[clinic]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_clinic_program_clinic_program_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[clinic_program] DROP CONSTRAINT [PK_clinic_program_clinic_program_id]
@@ -5269,7 +5269,7 @@ ALTER TABLE [dbo].[clinic_program]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_clinic_survey_clinic_survey_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[clinic_survey] DROP CONSTRAINT [PK_clinic_survey_clinic_survey_id]
@@ -5285,7 +5285,7 @@ ALTER TABLE [dbo].[clinic_survey]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_clinical_note_clinical_note_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[clinical_note] DROP CONSTRAINT [PK_clinical_note_clinical_note_id]
@@ -5301,7 +5301,7 @@ ALTER TABLE [dbo].[clinical_note]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_clinical_reminder_clinical_reminder_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[clinical_reminder] DROP CONSTRAINT [PK_clinical_reminder_clinical_reminder_id]
@@ -5317,7 +5317,7 @@ ALTER TABLE [dbo].[clinical_reminder]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_clinical_reminder_survey_clinical_reminder_survey_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[clinical_reminder_survey] DROP CONSTRAINT [PK_clinical_reminder_survey_clinical_reminder_survey_id]
@@ -5333,7 +5333,7 @@ ALTER TABLE [dbo].[clinical_reminder_survey]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_consult_consult_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[consult] DROP CONSTRAINT [PK_consult_consult_id]
@@ -5349,7 +5349,7 @@ ALTER TABLE [dbo].[consult]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_dashboard_alert_dashboard_alert_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[dashboard_alert] DROP CONSTRAINT [PK_dashboard_alert_dashboard_alert_id]
@@ -5365,7 +5365,7 @@ ALTER TABLE [dbo].[dashboard_alert]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_dashboard_alert_type_dashboard_alert_type_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[dashboard_alert_type] DROP CONSTRAINT [PK_dashboard_alert_type_dashboard_alert_type_id]
@@ -5381,7 +5381,7 @@ ALTER TABLE [dbo].[dashboard_alert_type]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_dialog_prompt_dialog_prompt_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[dialog_prompt] DROP CONSTRAINT [PK_dialog_prompt_dialog_prompt_id]
@@ -5397,7 +5397,7 @@ ALTER TABLE [dbo].[dialog_prompt]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_event_event_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[event] DROP CONSTRAINT [PK_event_event_id]
@@ -5413,7 +5413,7 @@ ALTER TABLE [dbo].[event]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_event_type_event_type_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[event_type] DROP CONSTRAINT [PK_event_type_event_type_id]
@@ -5429,7 +5429,7 @@ ALTER TABLE [dbo].[event_type]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_export_log_export_log_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[export_log] DROP CONSTRAINT [PK_export_log_export_log_id]
@@ -5445,7 +5445,7 @@ ALTER TABLE [dbo].[export_log]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_export_log_audit_export_log_audit_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[export_log_audit] DROP CONSTRAINT [PK_export_log_audit_export_log_audit_id]
@@ -5461,7 +5461,7 @@ ALTER TABLE [dbo].[export_log_audit]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_export_type_export_type_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[export_type] DROP CONSTRAINT [PK_export_type_export_type_id]
@@ -5477,7 +5477,7 @@ ALTER TABLE [dbo].[export_type]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_exportdata_filter_options_exportdata_filter_options_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[exportdata_filter_options] DROP CONSTRAINT [PK_exportdata_filter_options_exportdata_filter_options_id]
@@ -5493,7 +5493,7 @@ ALTER TABLE [dbo].[exportdata_filter_options]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_health_factor_health_factor_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[health_factor] DROP CONSTRAINT [PK_health_factor_health_factor_id]
@@ -5509,7 +5509,7 @@ ALTER TABLE [dbo].[health_factor]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_health_factor_dialog_prompt_health_factor_dialog_prompt_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[health_factor_dialog_prompt] DROP CONSTRAINT [PK_health_factor_dialog_prompt_health_factor_dialog_prompt_id]
@@ -5525,7 +5525,7 @@ ALTER TABLE [dbo].[health_factor_dialog_prompt]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_measure_measure_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[measure] DROP CONSTRAINT [PK_measure_measure_id]
@@ -5541,7 +5541,7 @@ ALTER TABLE [dbo].[measure]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_measure_answer_measure_answer_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[measure_answer] DROP CONSTRAINT [PK_measure_answer_measure_answer_id]
@@ -5557,7 +5557,7 @@ ALTER TABLE [dbo].[measure_answer]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_measure_answer_validation_measure_answer_validation_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[measure_answer_validation] DROP CONSTRAINT [PK_measure_answer_validation_measure_answer_validation_id]
@@ -5573,7 +5573,7 @@ ALTER TABLE [dbo].[measure_answer_validation]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_measure_type_measure_type_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[measure_type] DROP CONSTRAINT [PK_measure_type_measure_type_id]
@@ -5589,7 +5589,7 @@ ALTER TABLE [dbo].[measure_type]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_measure_validation_measure_validation_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[measure_validation] DROP CONSTRAINT [PK_measure_validation_measure_validation_id]
@@ -5605,7 +5605,7 @@ ALTER TABLE [dbo].[measure_validation]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_note_title_note_title_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[note_title] DROP CONSTRAINT [PK_note_title_note_title_id]
@@ -5621,7 +5621,7 @@ ALTER TABLE [dbo].[note_title]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_note_title_map_note_title_map_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[note_title_map] DROP CONSTRAINT [PK_note_title_map_note_title_map_id]
@@ -5637,7 +5637,7 @@ ALTER TABLE [dbo].[note_title_map]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_person_type_person_type_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[person_type] DROP CONSTRAINT [PK_person_type_person_type_id]
@@ -5653,7 +5653,7 @@ ALTER TABLE [dbo].[person_type]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_program_program_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[program] DROP CONSTRAINT [PK_program_program_id]
@@ -5669,7 +5669,7 @@ ALTER TABLE [dbo].[program]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_program_battery_program_battery_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[program_battery] DROP CONSTRAINT [PK_program_battery_program_battery_id]
@@ -5685,7 +5685,7 @@ ALTER TABLE [dbo].[program_battery]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_program_survey_program_survey_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[program_survey] DROP CONSTRAINT [PK_program_survey_program_survey_id]
@@ -5701,7 +5701,7 @@ ALTER TABLE [dbo].[program_survey]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_role_role_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[role] DROP CONSTRAINT [PK_role_role_id]
@@ -5717,7 +5717,7 @@ ALTER TABLE [dbo].[role]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_rule_rule_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[rule] DROP CONSTRAINT [PK_rule_rule_id]
@@ -5733,7 +5733,7 @@ ALTER TABLE [dbo].[rule]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_rule_assessment_variable_rule_assessment_variable_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[rule_assessment_variable] DROP CONSTRAINT [PK_rule_assessment_variable_rule_assessment_variable_id]
@@ -5749,7 +5749,7 @@ ALTER TABLE [dbo].[rule_assessment_variable]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_rule_event_rule_event_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[rule_event] DROP CONSTRAINT [PK_rule_event_rule_event_id]
@@ -5765,7 +5765,7 @@ ALTER TABLE [dbo].[rule_event]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_survey_survey_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[survey] DROP CONSTRAINT [PK_survey_survey_id]
@@ -5781,7 +5781,7 @@ ALTER TABLE [dbo].[survey]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_survey_attempt_survey_attempt_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[survey_attempt] DROP CONSTRAINT [PK_survey_attempt_survey_attempt_id]
@@ -5797,7 +5797,7 @@ ALTER TABLE [dbo].[survey_attempt]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_survey_measure_response_survey_measure_response_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[survey_measure_response] DROP CONSTRAINT [PK_survey_measure_response_survey_measure_response_id]
@@ -5813,7 +5813,7 @@ ALTER TABLE [dbo].[survey_measure_response]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_survey_page_survey_page_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[survey_page] DROP CONSTRAINT [PK_survey_page_survey_page_id]
@@ -5829,7 +5829,7 @@ ALTER TABLE [dbo].[survey_page]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_survey_page_measure_survey_page_measure_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[survey_page_measure] DROP CONSTRAINT [PK_survey_page_measure_survey_page_measure_id]
@@ -5845,7 +5845,7 @@ ALTER TABLE [dbo].[survey_page_measure]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_survey_score_interval_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[survey_score_interval] DROP CONSTRAINT [PK_survey_score_interval_id]
@@ -5861,7 +5861,7 @@ ALTER TABLE [dbo].[survey_score_interval]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_survey_section_survey_section_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[survey_section] DROP CONSTRAINT [PK_survey_section_survey_section_id]
@@ -5877,7 +5877,7 @@ ALTER TABLE [dbo].[survey_section]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_survey_template_survey_template_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[survey_template] DROP CONSTRAINT [PK_survey_template_survey_template_id]
@@ -5893,7 +5893,7 @@ ALTER TABLE [dbo].[survey_template]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_system_property_system_property_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[system_property] DROP CONSTRAINT [PK_system_property_system_property_id]
@@ -5909,7 +5909,7 @@ ALTER TABLE [dbo].[system_property]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_template_template_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[template] DROP CONSTRAINT [PK_template_template_id]
@@ -5925,7 +5925,7 @@ ALTER TABLE [dbo].[template]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_template_type_template_type_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[template_type] DROP CONSTRAINT [PK_template_type_template_type_id]
@@ -5941,7 +5941,7 @@ ALTER TABLE [dbo].[template_type]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_user_user_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[user] DROP CONSTRAINT [PK_user_user_id]
@@ -5957,7 +5957,7 @@ ALTER TABLE [dbo].[user]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_user_clinic_user_clinic_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[user_clinic] DROP CONSTRAINT [PK_user_clinic_user_clinic_id]
@@ -5973,7 +5973,7 @@ ALTER TABLE [dbo].[user_clinic]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_user_program_user_program_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[user_program] DROP CONSTRAINT [PK_user_program_user_program_id]
@@ -5989,7 +5989,7 @@ ALTER TABLE [dbo].[user_program]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_user_status_user_status_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[user_status] DROP CONSTRAINT [PK_user_status_user_status_id]
@@ -6005,7 +6005,7 @@ ALTER TABLE [dbo].[user_status]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_validation_validation_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[validation] DROP CONSTRAINT [PK_validation_validation_id]
@@ -6021,7 +6021,7 @@ ALTER TABLE [dbo].[validation]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_variable_template_variable_template_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[variable_template] DROP CONSTRAINT [PK_variable_template_variable_template_id]
@@ -6037,7 +6037,7 @@ ALTER TABLE [dbo].[variable_template]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_veteran_veteran_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[veteran] DROP CONSTRAINT [PK_veteran_veteran_id]
@@ -6053,7 +6053,7 @@ ALTER TABLE [dbo].[veteran]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_veteran_assessment_veteran_assessment_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[veteran_assessment] DROP CONSTRAINT [PK_veteran_assessment_veteran_assessment_id]
@@ -6069,7 +6069,7 @@ ALTER TABLE [dbo].[veteran_assessment]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_veteran_assessment_action_veteran_assessment_action_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[veteran_assessment_action] DROP CONSTRAINT [PK_veteran_assessment_action_veteran_assessment_action_id]
@@ -6085,7 +6085,7 @@ ALTER TABLE [dbo].[veteran_assessment_action]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_veteran_assessment_audit_log_veteran_assessment_audit_log_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[veteran_assessment_audit_log] DROP CONSTRAINT [PK_veteran_assessment_audit_log_veteran_assessment_audit_log_id]
@@ -6101,7 +6101,7 @@ ALTER TABLE [dbo].[veteran_assessment_audit_log]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_veteran_assessment_consult_veteran_assessment_consult_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[veteran_assessment_consult] DROP CONSTRAINT [PK_veteran_assessment_consult_veteran_assessment_consult_id]
@@ -6117,7 +6117,7 @@ ALTER TABLE [dbo].[veteran_assessment_consult]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_veteran_assessment_dashboard_alert_veteran_assessment_dashboard_alert_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[veteran_assessment_dashboard_alert] DROP CONSTRAINT [PK_veteran_assessment_dashboard_alert_veteran_assessment_dashboard_alert_id]
@@ -6133,7 +6133,7 @@ ALTER TABLE [dbo].[veteran_assessment_dashboard_alert]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_veteran_assessment_event_veteran_assessment_event_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[veteran_assessment_event] DROP CONSTRAINT [PK_veteran_assessment_event_veteran_assessment_event_id]
@@ -6149,7 +6149,7 @@ ALTER TABLE [dbo].[veteran_assessment_event]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_veteran_assessment_health_factor_veteran_assessment_health_factor_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[veteran_assessment_health_factor] DROP CONSTRAINT [PK_veteran_assessment_health_factor_veteran_assessment_health_factor_id]
@@ -6165,7 +6165,7 @@ ALTER TABLE [dbo].[veteran_assessment_health_factor]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_veteran_assessment_log_veteran_assessment_log_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[veteran_assessment_log] DROP CONSTRAINT [PK_veteran_assessment_log_veteran_assessment_log_id]
@@ -6181,7 +6181,7 @@ ALTER TABLE [dbo].[veteran_assessment_log]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_veteran_assessment_measure_visibility_veteran_assessment_measure_visibility_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[veteran_assessment_measure_visibility] DROP CONSTRAINT [PK_veteran_assessment_measure_visibility_veteran_assessment_measure_visibility_id]
@@ -6197,7 +6197,7 @@ ALTER TABLE [dbo].[veteran_assessment_measure_visibility]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_veteran_assessment_note_veteran_assessment_note_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[veteran_assessment_note] DROP CONSTRAINT [PK_veteran_assessment_note_veteran_assessment_note_id]
@@ -6213,7 +6213,7 @@ ALTER TABLE [dbo].[veteran_assessment_note]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_veteran_assessment_survey_veteran_assessment_survey_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[veteran_assessment_survey] DROP CONSTRAINT [PK_veteran_assessment_survey_veteran_assessment_survey_id]
@@ -6229,7 +6229,7 @@ ALTER TABLE [dbo].[veteran_assessment_survey]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'PK_veteran_assessment_survey_score_assessment_survey_score_id'  AND sc.name=N'dbo'  AND type in (N'PK'))
 ALTER TABLE [dbo].[veteran_assessment_survey_score] DROP CONSTRAINT [PK_veteran_assessment_survey_score_assessment_survey_score_id]
@@ -6245,7 +6245,7 @@ ALTER TABLE [dbo].[veteran_assessment_survey_score]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'ux_assessment_var_children_parent'  AND sc.name=N'dbo'  AND type in (N'UQ'))
 ALTER TABLE [dbo].[assessment_var_children] DROP CONSTRAINT [ux_assessment_var_children_parent]
@@ -6264,7 +6264,7 @@ GO
 
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'ux_event_type_ref_obj'  AND sc.name=N'dbo'  AND type in (N'UQ'))
 ALTER TABLE [dbo].[event] DROP CONSTRAINT [ux_event_type_ref_obj]
@@ -6280,7 +6280,7 @@ ALTER TABLE [dbo].[event]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'ux_rule_variable'  AND sc.name=N'dbo'  AND type in (N'UQ'))
 ALTER TABLE [dbo].[rule_assessment_variable] DROP CONSTRAINT [ux_rule_variable]
@@ -6296,7 +6296,7 @@ ALTER TABLE [dbo].[rule_assessment_variable]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'ux_rule_event'  AND sc.name=N'dbo'  AND type in (N'UQ'))
 ALTER TABLE [dbo].[rule_event] DROP CONSTRAINT [ux_rule_event]
@@ -6311,7 +6311,7 @@ ALTER TABLE [dbo].[rule_event]
 
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'ux_login_id'  AND sc.name=N'dbo'  AND type in (N'UQ'))
 ALTER TABLE [dbo].[user] DROP CONSTRAINT [ux_login_id]
@@ -6327,7 +6327,7 @@ ALTER TABLE [dbo].[user]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'ux_variable_template'  AND sc.name=N'dbo'  AND type in (N'UQ'))
 ALTER TABLE [dbo].[variable_template] DROP CONSTRAINT [ux_variable_template]
@@ -6342,7 +6342,7 @@ ALTER TABLE [dbo].[variable_template]
 
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'ux_assessment_consult'  AND sc.name=N'dbo'  AND type in (N'UQ'))
 ALTER TABLE [dbo].[veteran_assessment_consult] DROP CONSTRAINT [ux_assessment_consult]
@@ -6358,7 +6358,7 @@ ALTER TABLE [dbo].[veteran_assessment_consult]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'ux_assessment_dashboard_alert'  AND sc.name=N'dbo'  AND type in (N'UQ'))
 ALTER TABLE [dbo].[veteran_assessment_dashboard_alert] DROP CONSTRAINT [ux_assessment_dashboard_alert]
@@ -6374,7 +6374,7 @@ ALTER TABLE [dbo].[veteran_assessment_dashboard_alert]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'ux_assessment_health_factor'  AND sc.name=N'dbo'  AND type in (N'UQ'))
 ALTER TABLE [dbo].[veteran_assessment_health_factor] DROP CONSTRAINT [ux_assessment_health_factor]
@@ -6390,7 +6390,7 @@ ALTER TABLE [dbo].[veteran_assessment_health_factor]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'ux_assessment_measure_visibility'  AND sc.name=N'dbo'  AND type in (N'UQ'))
 ALTER TABLE [dbo].[veteran_assessment_measure_visibility] DROP CONSTRAINT [ux_assessment_measure_visibility]
@@ -6406,7 +6406,7 @@ ALTER TABLE [dbo].[veteran_assessment_measure_visibility]
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6424,7 +6424,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6442,7 +6442,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6460,7 +6460,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6478,7 +6478,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6496,7 +6496,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6514,7 +6514,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6532,7 +6532,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6550,7 +6550,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6568,7 +6568,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6586,7 +6586,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6604,7 +6604,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6622,7 +6622,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6640,7 +6640,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6658,7 +6658,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6676,7 +6676,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6694,7 +6694,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6712,7 +6712,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6730,7 +6730,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6748,7 +6748,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6766,7 +6766,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6784,7 +6784,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6802,7 +6802,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6820,7 +6820,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6838,7 +6838,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6856,7 +6856,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6874,7 +6874,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6892,7 +6892,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6910,7 +6910,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6928,7 +6928,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6947,7 +6947,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6965,7 +6965,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -6984,7 +6984,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7002,7 +7002,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7020,7 +7020,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7038,7 +7038,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7056,7 +7056,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7074,7 +7074,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7092,7 +7092,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7110,7 +7110,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7128,7 +7128,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7146,7 +7146,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7164,7 +7164,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7182,7 +7182,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7200,7 +7200,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7218,7 +7218,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7236,7 +7236,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7254,7 +7254,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7272,7 +7272,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7290,7 +7290,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7308,7 +7308,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7326,7 +7326,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7344,7 +7344,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7362,7 +7362,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7380,7 +7380,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7398,7 +7398,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7416,7 +7416,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7434,7 +7434,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7452,7 +7452,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7470,7 +7470,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7488,7 +7488,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7506,7 +7506,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7524,7 +7524,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7542,7 +7542,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7560,7 +7560,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7578,7 +7578,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7596,7 +7596,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7614,7 +7614,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7632,7 +7632,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7650,7 +7650,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7668,7 +7668,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7686,7 +7686,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7704,7 +7704,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7722,7 +7722,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7740,7 +7740,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7758,7 +7758,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7776,7 +7776,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7794,7 +7794,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7812,7 +7812,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7830,7 +7830,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7848,7 +7848,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7866,7 +7866,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7884,7 +7884,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7902,7 +7902,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7920,7 +7920,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7938,7 +7938,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7956,7 +7956,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7974,7 +7974,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -7992,7 +7992,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -8010,7 +8010,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -8028,7 +8028,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -8046,7 +8046,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -8064,7 +8064,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -8082,7 +8082,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF  EXISTS (
        SELECT * FROM sys.objects  so JOIN sys.indexes si
@@ -8100,7 +8100,7 @@ WITH (SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, IGNORE_DUP_KEY = OFF, ONLINE = 
 GO
 GO
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_assessment_var_id'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[assessment_formula] DROP CONSTRAINT [fk_assessment_var_id]
@@ -8113,14 +8113,14 @@ ALTER TABLE [dbo].[assessment_formula]
  FOREIGN KEY 
    ([assessment_variable_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[assessment_variable]     ([assessment_variable_id])
+   [dev-prod].[dbo].[assessment_variable]     ([assessment_variable_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_assessment_variable_child'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[assessment_var_children] DROP CONSTRAINT [fk_assessment_variable_child]
@@ -8133,7 +8133,7 @@ ALTER TABLE [dbo].[assessment_var_children]
  FOREIGN KEY 
    ([variable_child])
  REFERENCES 
-   [SDC-PROD].[dbo].[assessment_variable]     ([assessment_variable_id])
+   [dev-prod].[dbo].[assessment_variable]     ([assessment_variable_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8150,14 +8150,14 @@ ALTER TABLE [dbo].[assessment_var_children]
  FOREIGN KEY 
    ([variable_parent])
  REFERENCES 
-   [SDC-PROD].[dbo].[assessment_variable]     ([assessment_variable_id])
+   [dev-prod].[dbo].[assessment_variable]     ([assessment_variable_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_assessment_variable_type'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[assessment_variable] DROP CONSTRAINT [fk_assessment_variable_type]
@@ -8170,7 +8170,7 @@ ALTER TABLE [dbo].[assessment_variable]
  FOREIGN KEY 
    ([assessment_variable_type_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[assessment_variable_type]     ([assessment_variable_type_id])
+   [dev-prod].[dbo].[assessment_variable_type]     ([assessment_variable_type_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8187,7 +8187,7 @@ ALTER TABLE [dbo].[assessment_variable]
  FOREIGN KEY 
    ([measure_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[measure]     ([measure_id])
+   [dev-prod].[dbo].[measure]     ([measure_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8204,14 +8204,14 @@ ALTER TABLE [dbo].[assessment_variable]
  FOREIGN KEY 
    ([measure_answer_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[measure_answer]     ([measure_answer_id])
+   [dev-prod].[dbo].[measure_answer]     ([measure_answer_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_assessment_variable_column_av'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[assessment_variable_column] DROP CONSTRAINT [fk_assessment_variable_column_av]
@@ -8224,14 +8224,14 @@ ALTER TABLE [dbo].[assessment_variable_column]
  FOREIGN KEY 
    ([assessment_variable_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[assessment_variable]     ([assessment_variable_id])
+   [dev-prod].[dbo].[assessment_variable]     ([assessment_variable_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_bttry_srvy_bttry'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[battery_survey] DROP CONSTRAINT [fk_bttry_srvy_bttry]
@@ -8244,7 +8244,7 @@ ALTER TABLE [dbo].[battery_survey]
  FOREIGN KEY 
    ([battery_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[battery]     ([battery_id])
+   [dev-prod].[dbo].[battery]     ([battery_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8261,14 +8261,14 @@ ALTER TABLE [dbo].[battery_survey]
  FOREIGN KEY 
    ([survey_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[survey]     ([survey_id])
+   [dev-prod].[dbo].[survey]     ([survey_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_battery_template_battery'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[battery_template] DROP CONSTRAINT [fk_battery_template_battery]
@@ -8281,7 +8281,7 @@ ALTER TABLE [dbo].[battery_template]
  FOREIGN KEY 
    ([battery_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[battery]     ([battery_id])
+   [dev-prod].[dbo].[battery]     ([battery_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8298,14 +8298,14 @@ ALTER TABLE [dbo].[battery_template]
  FOREIGN KEY 
    ([template_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[template]     ([template_id])
+   [dev-prod].[dbo].[template]     ([template_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_clnc_prgm_clnc'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[clinic_program] DROP CONSTRAINT [fk_clnc_prgm_clnc]
@@ -8318,7 +8318,7 @@ ALTER TABLE [dbo].[clinic_program]
  FOREIGN KEY 
    ([clinic_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[clinic]     ([clinic_id])
+   [dev-prod].[dbo].[clinic]     ([clinic_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8335,14 +8335,14 @@ ALTER TABLE [dbo].[clinic_program]
  FOREIGN KEY 
    ([program_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[program]     ([program_id])
+   [dev-prod].[dbo].[program]     ([program_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_clnc_srvy_clnc'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[clinic_survey] DROP CONSTRAINT [fk_clnc_srvy_clnc]
@@ -8355,7 +8355,7 @@ ALTER TABLE [dbo].[clinic_survey]
  FOREIGN KEY 
    ([clinic_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[clinic]     ([clinic_id])
+   [dev-prod].[dbo].[clinic]     ([clinic_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8372,14 +8372,14 @@ ALTER TABLE [dbo].[clinic_survey]
  FOREIGN KEY 
    ([survey_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[survey]     ([survey_id])
+   [dev-prod].[dbo].[survey]     ([survey_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_clncl_rmndr_srvy_clncl'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[clinical_reminder_survey] DROP CONSTRAINT [fk_clncl_rmndr_srvy_clncl]
@@ -8392,7 +8392,7 @@ ALTER TABLE [dbo].[clinical_reminder_survey]
  FOREIGN KEY 
    ([clinical_reminder_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[clinical_reminder]     ([clinical_reminder_id])
+   [dev-prod].[dbo].[clinical_reminder]     ([clinical_reminder_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8409,14 +8409,14 @@ ALTER TABLE [dbo].[clinical_reminder_survey]
  FOREIGN KEY 
    ([survey_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[survey]     ([survey_id])
+   [dev-prod].[dbo].[survey]     ([survey_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_dashboard_alert_type'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[dashboard_alert] DROP CONSTRAINT [fk_dashboard_alert_type]
@@ -8429,14 +8429,14 @@ ALTER TABLE [dbo].[dashboard_alert]
  FOREIGN KEY 
    ([dashboard_alert_type_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[dashboard_alert_type]     ([dashboard_alert_type_id])
+   [dev-prod].[dbo].[dashboard_alert_type]     ([dashboard_alert_type_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_action_action_type'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[event] DROP CONSTRAINT [fk_action_action_type]
@@ -8449,14 +8449,14 @@ ALTER TABLE [dbo].[event]
  FOREIGN KEY 
    ([event_type_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[event_type]     ([event_type_id])
+   [dev-prod].[dbo].[event_type]     ([event_type_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_export_type_el'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[export_log] DROP CONSTRAINT [fk_export_type_el]
@@ -8469,7 +8469,7 @@ ALTER TABLE [dbo].[export_log]
  FOREIGN KEY 
    ([export_type_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[export_type]     ([export_type_id])
+   [dev-prod].[dbo].[export_type]     ([export_type_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8486,7 +8486,7 @@ ALTER TABLE [dbo].[export_log]
  FOREIGN KEY 
    ([program_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[program]     ([program_id])
+   [dev-prod].[dbo].[program]     ([program_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8503,7 +8503,7 @@ ALTER TABLE [dbo].[export_log]
  FOREIGN KEY 
    ([exported_by_user_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[user]     ([user_id])
+   [dev-prod].[dbo].[user]     ([user_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8520,7 +8520,7 @@ ALTER TABLE [dbo].[export_log]
  FOREIGN KEY 
    ([clinician_user_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[user]     ([user_id])
+   [dev-prod].[dbo].[user]     ([user_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8537,7 +8537,7 @@ ALTER TABLE [dbo].[export_log]
  FOREIGN KEY 
    ([created_by_user_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[user]     ([user_id])
+   [dev-prod].[dbo].[user]     ([user_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8554,14 +8554,14 @@ ALTER TABLE [dbo].[export_log]
  FOREIGN KEY 
    ([veteran_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[veteran]     ([veteran_id])
+   [dev-prod].[dbo].[veteran]     ([veteran_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_export_log_id'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[export_log_audit] DROP CONSTRAINT [fk_export_log_id]
@@ -8574,7 +8574,7 @@ ALTER TABLE [dbo].[export_log_audit]
  FOREIGN KEY 
    ([export_log_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[export_log]     ([export_log_id])
+   [dev-prod].[dbo].[export_log]     ([export_log_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8591,14 +8591,14 @@ ALTER TABLE [dbo].[export_log_audit]
  FOREIGN KEY 
    ([exported_by_user_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[user]     ([user_id])
+   [dev-prod].[dbo].[user]     ([user_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_health_factor_reminder'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[health_factor] DROP CONSTRAINT [fk_health_factor_reminder]
@@ -8611,14 +8611,14 @@ ALTER TABLE [dbo].[health_factor]
  FOREIGN KEY 
    ([clinical_reminder_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[clinical_reminder]     ([clinical_reminder_id])
+   [dev-prod].[dbo].[clinical_reminder]     ([clinical_reminder_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_hlth_fctr_dlg_prmpt_dp'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[health_factor_dialog_prompt] DROP CONSTRAINT [fk_hlth_fctr_dlg_prmpt_dp]
@@ -8631,7 +8631,7 @@ ALTER TABLE [dbo].[health_factor_dialog_prompt]
  FOREIGN KEY 
    ([dialog_prompt_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[dialog_prompt]     ([dialog_prompt_id])
+   [dev-prod].[dbo].[dialog_prompt]     ([dialog_prompt_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8648,14 +8648,14 @@ ALTER TABLE [dbo].[health_factor_dialog_prompt]
  FOREIGN KEY 
    ([health_factor_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[health_factor]     ([health_factor_id])
+   [dev-prod].[dbo].[health_factor]     ([health_factor_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_measure_measure_type'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[measure] DROP CONSTRAINT [fk_measure_measure_type]
@@ -8668,7 +8668,7 @@ ALTER TABLE [dbo].[measure]
  FOREIGN KEY 
    ([measure_type_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[measure_type]     ([measure_type_id])
+   [dev-prod].[dbo].[measure_type]     ([measure_type_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8677,7 +8677,7 @@ GO
 
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_calculation_type'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[measure_answer] DROP CONSTRAINT [fk_calculation_type]
@@ -8690,7 +8690,7 @@ ALTER TABLE [dbo].[measure_answer]
  FOREIGN KEY 
    ([calculation_type_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[calculation_type]     ([calculation_type_id])
+   [dev-prod].[dbo].[calculation_type]     ([calculation_type_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8707,14 +8707,14 @@ ALTER TABLE [dbo].[measure_answer]
  FOREIGN KEY 
    ([measure_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[measure]     ([measure_id])
+   [dev-prod].[dbo].[measure]     ([measure_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_measure_answer_validation_measure'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[measure_answer_validation] DROP CONSTRAINT [fk_measure_answer_validation_measure]
@@ -8727,7 +8727,7 @@ ALTER TABLE [dbo].[measure_answer_validation]
  FOREIGN KEY 
    ([measure_answer_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[measure_answer]     ([measure_answer_id])
+   [dev-prod].[dbo].[measure_answer]     ([measure_answer_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8744,14 +8744,14 @@ ALTER TABLE [dbo].[measure_answer_validation]
  FOREIGN KEY 
    ([validation_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[validation]     ([validation_id])
+   [dev-prod].[dbo].[validation]     ([validation_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_measure_validation_measure'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[measure_validation] DROP CONSTRAINT [fk_measure_validation_measure]
@@ -8764,7 +8764,7 @@ ALTER TABLE [dbo].[measure_validation]
  FOREIGN KEY 
    ([measure_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[measure]     ([measure_id])
+   [dev-prod].[dbo].[measure]     ([measure_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8781,14 +8781,14 @@ ALTER TABLE [dbo].[measure_validation]
  FOREIGN KEY 
    ([validation_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[validation]     ([validation_id])
+   [dev-prod].[dbo].[validation]     ([validation_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_note_title_map_nt'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[note_title_map] DROP CONSTRAINT [fk_note_title_map_nt]
@@ -8801,7 +8801,7 @@ ALTER TABLE [dbo].[note_title_map]
  FOREIGN KEY 
    ([note_title_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[note_title]     ([note_title_id])
+   [dev-prod].[dbo].[note_title]     ([note_title_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8818,14 +8818,14 @@ ALTER TABLE [dbo].[note_title_map]
  FOREIGN KEY 
    ([program_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[program]     ([program_id])
+   [dev-prod].[dbo].[program]     ([program_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_program_battery_battery'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[program_battery] DROP CONSTRAINT [fk_program_battery_battery]
@@ -8838,7 +8838,7 @@ ALTER TABLE [dbo].[program_battery]
  FOREIGN KEY 
    ([battery_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[battery]     ([battery_id])
+   [dev-prod].[dbo].[battery]     ([battery_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8855,14 +8855,14 @@ ALTER TABLE [dbo].[program_battery]
  FOREIGN KEY 
    ([program_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[program]     ([program_id])
+   [dev-prod].[dbo].[program]     ([program_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_prgm_srvy_prgm'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[program_survey] DROP CONSTRAINT [fk_prgm_srvy_prgm]
@@ -8875,7 +8875,7 @@ ALTER TABLE [dbo].[program_survey]
  FOREIGN KEY 
    ([program_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[program]     ([program_id])
+   [dev-prod].[dbo].[program]     ([program_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8892,14 +8892,14 @@ ALTER TABLE [dbo].[program_survey]
  FOREIGN KEY 
    ([survey_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[survey]     ([survey_id])
+   [dev-prod].[dbo].[survey]     ([survey_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_rule_assessment_variable_rule'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[rule_assessment_variable] DROP CONSTRAINT [fk_rule_assessment_variable_rule]
@@ -8912,7 +8912,7 @@ ALTER TABLE [dbo].[rule_assessment_variable]
  FOREIGN KEY 
    ([rule_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[rule]     ([rule_id])
+   [dev-prod].[dbo].[rule]     ([rule_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8929,14 +8929,14 @@ ALTER TABLE [dbo].[rule_assessment_variable]
  FOREIGN KEY 
    ([assessment_variable_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[assessment_variable]     ([assessment_variable_id])
+   [dev-prod].[dbo].[assessment_variable]     ([assessment_variable_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_rule_event_event'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[rule_event] DROP CONSTRAINT [fk_rule_event_event]
@@ -8949,7 +8949,7 @@ ALTER TABLE [dbo].[rule_event]
  FOREIGN KEY 
    ([event_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[event]     ([event_id])
+   [dev-prod].[dbo].[event]     ([event_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -8966,14 +8966,14 @@ ALTER TABLE [dbo].[rule_event]
  FOREIGN KEY 
    ([rule_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[rule]     ([rule_id])
+   [dev-prod].[dbo].[rule]     ([rule_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_survey_survey_section'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[survey] DROP CONSTRAINT [fk_survey_survey_section]
@@ -8986,14 +8986,14 @@ ALTER TABLE [dbo].[survey]
  FOREIGN KEY 
    ([survey_section_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[survey_section]     ([survey_section_id])
+   [dev-prod].[dbo].[survey_section]     ([survey_section_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_survey_attempt_vas'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[survey_attempt] DROP CONSTRAINT [fk_survey_attempt_vas]
@@ -9006,14 +9006,14 @@ ALTER TABLE [dbo].[survey_attempt]
  FOREIGN KEY 
    ([veteran_assessment_survey_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[veteran_assessment_survey]     ([veteran_assessment_survey_id])
+   [dev-prod].[dbo].[veteran_assessment_survey]     ([veteran_assessment_survey_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_survey_meas_resp_va'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[survey_measure_response] DROP CONSTRAINT [fk_survey_meas_resp_va]
@@ -9026,7 +9026,7 @@ ALTER TABLE [dbo].[survey_measure_response]
  FOREIGN KEY 
    ([veteran_assessment_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[veteran_assessment]     ([veteran_assessment_id])
+   [dev-prod].[dbo].[veteran_assessment]     ([veteran_assessment_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9043,7 +9043,7 @@ ALTER TABLE [dbo].[survey_measure_response]
  FOREIGN KEY 
    ([copiedFromAssessment])
  REFERENCES 
-   [SDC-PROD].[dbo].[veteran_assessment]     ([veteran_assessment_id])
+   [dev-prod].[dbo].[veteran_assessment]     ([veteran_assessment_id])
     ON DELETE SET NULL
     ON UPDATE NO ACTION
 
@@ -9060,7 +9060,7 @@ ALTER TABLE [dbo].[survey_measure_response]
  FOREIGN KEY 
    ([measure_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[measure]     ([measure_id])
+   [dev-prod].[dbo].[measure]     ([measure_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9077,7 +9077,7 @@ ALTER TABLE [dbo].[survey_measure_response]
  FOREIGN KEY 
    ([measure_answer_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[measure_answer]     ([measure_answer_id])
+   [dev-prod].[dbo].[measure_answer]     ([measure_answer_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9094,14 +9094,14 @@ ALTER TABLE [dbo].[survey_measure_response]
  FOREIGN KEY 
    ([survey_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[survey]     ([survey_id])
+   [dev-prod].[dbo].[survey]     ([survey_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_survey_page_survey'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[survey_page] DROP CONSTRAINT [fk_survey_page_survey]
@@ -9114,14 +9114,14 @@ ALTER TABLE [dbo].[survey_page]
  FOREIGN KEY 
    ([survey_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[survey]     ([survey_id])
+   [dev-prod].[dbo].[survey]     ([survey_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_survey_page_measure_m'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[survey_page_measure] DROP CONSTRAINT [fk_survey_page_measure_m]
@@ -9134,7 +9134,7 @@ ALTER TABLE [dbo].[survey_page_measure]
  FOREIGN KEY 
    ([measure_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[measure]     ([measure_id])
+   [dev-prod].[dbo].[measure]     ([measure_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9151,14 +9151,14 @@ ALTER TABLE [dbo].[survey_page_measure]
  FOREIGN KEY 
    ([survey_page_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[survey_page]     ([survey_page_id])
+   [dev-prod].[dbo].[survey_page]     ([survey_page_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_survey_template_survey'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[survey_template] DROP CONSTRAINT [fk_survey_template_survey]
@@ -9171,7 +9171,7 @@ ALTER TABLE [dbo].[survey_template]
  FOREIGN KEY 
    ([survey_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[survey]     ([survey_id])
+   [dev-prod].[dbo].[survey]     ([survey_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9188,14 +9188,14 @@ ALTER TABLE [dbo].[survey_template]
  FOREIGN KEY 
    ([template_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[template]     ([template_id])
+   [dev-prod].[dbo].[template]     ([template_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_template_type'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[template] DROP CONSTRAINT [fk_template_type]
@@ -9208,14 +9208,14 @@ ALTER TABLE [dbo].[template]
  FOREIGN KEY 
    ([template_type_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[template_type]     ([template_type_id])
+   [dev-prod].[dbo].[template_type]     ([template_type_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_user_role'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[user] DROP CONSTRAINT [fk_user_role]
@@ -9228,7 +9228,7 @@ ALTER TABLE [dbo].[user]
  FOREIGN KEY 
    ([role_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[role]     ([role_id])
+   [dev-prod].[dbo].[role]     ([role_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9245,14 +9245,14 @@ ALTER TABLE [dbo].[user]
  FOREIGN KEY 
    ([user_status_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[user_status]     ([user_status_id])
+   [dev-prod].[dbo].[user_status]     ([user_status_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_user_clinic_clinic'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[user_clinic] DROP CONSTRAINT [fk_user_clinic_clinic]
@@ -9265,7 +9265,7 @@ ALTER TABLE [dbo].[user_clinic]
  FOREIGN KEY 
    ([clinic_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[clinic]     ([clinic_id])
+   [dev-prod].[dbo].[clinic]     ([clinic_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9282,14 +9282,14 @@ ALTER TABLE [dbo].[user_clinic]
  FOREIGN KEY 
    ([user_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[user]     ([user_id])
+   [dev-prod].[dbo].[user]     ([user_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_user_program_program'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[user_program] DROP CONSTRAINT [fk_user_program_program]
@@ -9302,7 +9302,7 @@ ALTER TABLE [dbo].[user_program]
  FOREIGN KEY 
    ([program_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[program]     ([program_id])
+   [dev-prod].[dbo].[program]     ([program_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9319,14 +9319,14 @@ ALTER TABLE [dbo].[user_program]
  FOREIGN KEY 
    ([user_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[user]     ([user_id])
+   [dev-prod].[dbo].[user]     ([user_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_assessment_variable'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[variable_template] DROP CONSTRAINT [fk_assessment_variable]
@@ -9339,7 +9339,7 @@ ALTER TABLE [dbo].[variable_template]
  FOREIGN KEY 
    ([assessment_variable_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[assessment_variable]     ([assessment_variable_id])
+   [dev-prod].[dbo].[assessment_variable]     ([assessment_variable_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9356,14 +9356,14 @@ ALTER TABLE [dbo].[variable_template]
  FOREIGN KEY 
    ([template_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[template]     ([template_id])
+   [dev-prod].[dbo].[template]     ([template_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_veteran_assess_battery'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[veteran_assessment] DROP CONSTRAINT [fk_veteran_assess_battery]
@@ -9376,7 +9376,7 @@ ALTER TABLE [dbo].[veteran_assessment]
  FOREIGN KEY 
    ([battery_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[battery]     ([battery_id])
+   [dev-prod].[dbo].[battery]     ([battery_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9393,7 +9393,7 @@ ALTER TABLE [dbo].[veteran_assessment]
  FOREIGN KEY 
    ([clinic_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[clinic]     ([clinic_id])
+   [dev-prod].[dbo].[clinic]     ([clinic_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9410,7 +9410,7 @@ ALTER TABLE [dbo].[veteran_assessment]
  FOREIGN KEY 
    ([clinician_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[user]     ([user_id])
+   [dev-prod].[dbo].[user]     ([user_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9427,7 +9427,7 @@ ALTER TABLE [dbo].[veteran_assessment]
  FOREIGN KEY 
    ([created_by_user_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[user]     ([user_id])
+   [dev-prod].[dbo].[user]     ([user_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9444,7 +9444,7 @@ ALTER TABLE [dbo].[veteran_assessment]
  FOREIGN KEY 
    ([note_title_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[note_title]     ([note_title_id])
+   [dev-prod].[dbo].[note_title]     ([note_title_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9461,7 +9461,7 @@ ALTER TABLE [dbo].[veteran_assessment]
  FOREIGN KEY 
    ([program_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[program]     ([program_id])
+   [dev-prod].[dbo].[program]     ([program_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9478,7 +9478,7 @@ ALTER TABLE [dbo].[veteran_assessment]
  FOREIGN KEY 
    ([signed_by_user_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[user]     ([user_id])
+   [dev-prod].[dbo].[user]     ([user_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9495,7 +9495,7 @@ ALTER TABLE [dbo].[veteran_assessment]
  FOREIGN KEY 
    ([assessment_status_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[assessment_status]     ([assessment_status_id])
+   [dev-prod].[dbo].[assessment_status]     ([assessment_status_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9512,14 +9512,14 @@ ALTER TABLE [dbo].[veteran_assessment]
  FOREIGN KEY 
    ([veteran_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[veteran]     ([veteran_id])
+   [dev-prod].[dbo].[veteran]     ([veteran_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_assessment_status_id'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[veteran_assessment_audit_log] DROP CONSTRAINT [fk_assessment_status_id]
@@ -9532,7 +9532,7 @@ ALTER TABLE [dbo].[veteran_assessment_audit_log]
  FOREIGN KEY 
    ([assessment_status_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[assessment_status]     ([assessment_status_id])
+   [dev-prod].[dbo].[assessment_status]     ([assessment_status_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9549,7 +9549,7 @@ ALTER TABLE [dbo].[veteran_assessment_audit_log]
  FOREIGN KEY 
    ([person_type_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[person_type]     ([person_type_id])
+   [dev-prod].[dbo].[person_type]     ([person_type_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9566,14 +9566,14 @@ ALTER TABLE [dbo].[veteran_assessment_audit_log]
  FOREIGN KEY 
    ([veteran_assessment_event_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[veteran_assessment_event]     ([veteran_assessment_event_id])
+   [dev-prod].[dbo].[veteran_assessment_event]     ([veteran_assessment_event_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_veteran_assessment_consult_assessment'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[veteran_assessment_consult] DROP CONSTRAINT [fk_veteran_assessment_consult_assessment]
@@ -9586,7 +9586,7 @@ ALTER TABLE [dbo].[veteran_assessment_consult]
  FOREIGN KEY 
    ([veteran_assessment_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[veteran_assessment]     ([veteran_assessment_id])
+   [dev-prod].[dbo].[veteran_assessment]     ([veteran_assessment_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9603,14 +9603,14 @@ ALTER TABLE [dbo].[veteran_assessment_consult]
  FOREIGN KEY 
    ([consult_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[consult]     ([consult_id])
+   [dev-prod].[dbo].[consult]     ([consult_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_veteran_assessment_dashboard_alert_alert'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[veteran_assessment_dashboard_alert] DROP CONSTRAINT [fk_veteran_assessment_dashboard_alert_alert]
@@ -9623,7 +9623,7 @@ ALTER TABLE [dbo].[veteran_assessment_dashboard_alert]
  FOREIGN KEY 
    ([dashboard_alert_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[dashboard_alert]     ([dashboard_alert_id])
+   [dev-prod].[dbo].[dashboard_alert]     ([dashboard_alert_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9640,14 +9640,14 @@ ALTER TABLE [dbo].[veteran_assessment_dashboard_alert]
  FOREIGN KEY 
    ([veteran_assessment_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[veteran_assessment]     ([veteran_assessment_id])
+   [dev-prod].[dbo].[veteran_assessment]     ([veteran_assessment_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_veteran_assessment_health_factor_assessment'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[veteran_assessment_health_factor] DROP CONSTRAINT [fk_veteran_assessment_health_factor_assessment]
@@ -9660,7 +9660,7 @@ ALTER TABLE [dbo].[veteran_assessment_health_factor]
  FOREIGN KEY 
    ([veteran_assessment_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[veteran_assessment]     ([veteran_assessment_id])
+   [dev-prod].[dbo].[veteran_assessment]     ([veteran_assessment_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9677,14 +9677,14 @@ ALTER TABLE [dbo].[veteran_assessment_health_factor]
  FOREIGN KEY 
    ([health_factor_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[health_factor]     ([health_factor_id])
+   [dev-prod].[dbo].[health_factor]     ([health_factor_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_veteran_assessment_action'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[veteran_assessment_log] DROP CONSTRAINT [fk_veteran_assessment_action]
@@ -9697,14 +9697,14 @@ ALTER TABLE [dbo].[veteran_assessment_log]
  FOREIGN KEY 
    ([veteran_assessment_action_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[veteran_assessment_action]     ([veteran_assessment_action_id])
+   [dev-prod].[dbo].[veteran_assessment_action]     ([veteran_assessment_action_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_veteran_assessment_measure_visibility_assessment'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[veteran_assessment_measure_visibility] DROP CONSTRAINT [fk_veteran_assessment_measure_visibility_assessment]
@@ -9717,7 +9717,7 @@ ALTER TABLE [dbo].[veteran_assessment_measure_visibility]
  FOREIGN KEY 
    ([veteran_assessment_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[veteran_assessment]     ([veteran_assessment_id])
+   [dev-prod].[dbo].[veteran_assessment]     ([veteran_assessment_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9734,14 +9734,14 @@ ALTER TABLE [dbo].[veteran_assessment_measure_visibility]
  FOREIGN KEY 
    ([measure_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[measure]     ([measure_id])
+   [dev-prod].[dbo].[measure]     ([measure_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_va_note_cn'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[veteran_assessment_note] DROP CONSTRAINT [fk_va_note_cn]
@@ -9754,7 +9754,7 @@ ALTER TABLE [dbo].[veteran_assessment_note]
  FOREIGN KEY 
    ([clinical_note_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[clinical_note]     ([clinical_note_id])
+   [dev-prod].[dbo].[clinical_note]     ([clinical_note_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9771,14 +9771,14 @@ ALTER TABLE [dbo].[veteran_assessment_note]
  FOREIGN KEY 
    ([veteran_assessment_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[veteran_assessment]     ([veteran_assessment_id])
+   [dev-prod].[dbo].[veteran_assessment]     ([veteran_assessment_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
 GO
 
 
-USE [SDC-PROD]
+USE [dev-prod]
 GO
 IF EXISTS (SELECT * FROM sys.objects so JOIN sys.schemas sc ON so.schema_id = sc.schema_id WHERE so.name = N'fk_veteran_assess_survey_pa'  AND sc.name=N'dbo'  AND type in (N'F'))
 ALTER TABLE [dbo].[veteran_assessment_survey] DROP CONSTRAINT [fk_veteran_assess_survey_pa]
@@ -9791,7 +9791,7 @@ ALTER TABLE [dbo].[veteran_assessment_survey]
  FOREIGN KEY 
    ([veteran_assessment_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[veteran_assessment]     ([veteran_assessment_id])
+   [dev-prod].[dbo].[veteran_assessment]     ([veteran_assessment_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 
@@ -9808,7 +9808,7 @@ ALTER TABLE [dbo].[veteran_assessment_survey]
  FOREIGN KEY 
    ([survey_id])
  REFERENCES 
-   [SDC-PROD].[dbo].[survey]     ([survey_id])
+   [dev-prod].[dbo].[survey]     ([survey_id])
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 

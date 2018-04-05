@@ -687,6 +687,17 @@
 			</properties>
 		</profile>
 		<profile>
+			<id>dev-prod</id>
+			<build>
+				<finalName>dev</finalName>
+			</build>
+			<properties>
+				<jdbc.url>jdbc:sqlserver://localhost:1433;databaseName=dev-prod</jdbc.url>
+				<jdbc.db>dev-prod</jdbc.db>
+				<log.suffix>dev-prod</log.suffix>
+			</properties>
+		</profile>
+		<profile>
 			<id>las-test</id>
 			<build>
 				<finalName>las-test</finalName>
