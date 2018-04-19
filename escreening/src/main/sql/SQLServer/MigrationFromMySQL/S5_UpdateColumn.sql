@@ -1,0 +1,1 @@
+alter table assessment_formula alter column user_defined bit not null

@@ -275,11 +275,18 @@ public class ResolverParameters {
             switch(av.getAssessmentVariableTypeId().getAssessmentVariableTypeId()){
             case AssessmentConstants.ASSESSMENT_VARIABLE_TYPE_MEASURE_ANSWER:
                 MeasureAnswer ma = av.getMeasureAnswer();
-                checkMeasureIsVisibile(ma.getMeasure());               
-                logger.info("There was no MeasureAnswer response for MeasureAnswer ID: {}, assessment ID: {}",
-                        ma.getMeasureAnswerId(), getAssessmentId());
-                
-                return ma.getMeasure().getMeasureType().getMeasureTypeId() == AssessmentConstants.MEASURE_TYPE_SELECT_MULTI ? "false" : "0";
+                if(ma.getMeasure() != null){
+					logger.error("the measure anwer get measure is:" + ma.getMeasure());
+					checkMeasureIsVisibile(ma.getMeasure());
+						
+					logger.info("There was no MeasureAnswer response for MeasureAnswer ID: {}, assessment ID: {}",
+						ma.getMeasureAnswerId(), getAssessmentId());
+					
+					return ma.getMeasure().getMeasureType().getMeasureTypeId() == AssessmentConstants.MEASURE_TYPE_SELECT_MULTI ? "false" : "0";
+				}               
+				else{
+					return "0";
+				}
                 
             case AssessmentConstants.ASSESSMENT_VARIABLE_TYPE_MEASURE:
                 checkMeasureIsVisibile(av.getMeasure());
@@ -314,23 +321,28 @@ public class ResolverParameters {
     }
     
     private boolean isMeasureVisibile(gov.va.escreening.entity.Measure measure){
-        if(measureVisibilityMap == null){
-            ImmutableMap.Builder<Integer, Boolean> mapBuilder = ImmutableMap.builder();
-            if(veteranAssessment.getMeasureVisibilityList() != null){
-                for(VeteranAssessmentMeasureVisibility measureVis : veteranAssessment.getMeasureVisibilityList()){
-                    mapBuilder.put(measureVis.getMeasure().getMeasureId(), measureVis.getIsVisible());
-                }
-            }            
-            measureVisibilityMap = mapBuilder.build();
-        }
-        
-        Boolean isVisible = measureVisibilityMap.get(measure.getMeasureId());
-        boolean isTableChildQuestion = tableMeasures.contains(measure.getMeasureId());
-        
-        if(isVisible == null){//if null it means there are no rules determining the visibility of the question
-            isVisible = !isTableChildQuestion;
-        }
-        return isVisible;
+        if(measure != null){
+			if(measureVisibilityMap == null){
+				ImmutableMap.Builder<Integer, Boolean> mapBuilder = ImmutableMap.builder();
+				if(veteranAssessment.getMeasureVisibilityList() != null){
+					for(VeteranAssessmentMeasureVisibility measureVis : veteranAssessment.getMeasureVisibilityList()){
+						mapBuilder.put(measureVis.getMeasure().getMeasureId(), measureVis.getIsVisible());
+					}
+				}            
+				measureVisibilityMap = mapBuilder.build();
+			}
+			
+			Boolean isVisible = measureVisibilityMap.get(measure.getMeasureId());
+			boolean isTableChildQuestion = tableMeasures.contains(measure.getMeasureId());
+			
+			if(isVisible == null){//if null it means there are no rules determining the visibility of the question
+				isVisible = !isTableChildQuestion;
+			}
+			return isVisible;
+		}
+		else{
+			return false;
+		}
     }
     
 //    private boolean wasntAnswered(AssessmentVariableDto av){
