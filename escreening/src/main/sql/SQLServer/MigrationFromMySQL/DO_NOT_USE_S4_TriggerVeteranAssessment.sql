@@ -1,4 +1,6 @@
-CREATE TRIGGER [dbo].[upd_question_presence] 
+/*Do Not run!! This trigger needs to be refactored. Major performance issue will result from creating this trigger*/
+
+CREATE TRIGGER [dbo].[upd_question_presence]
 ON [dbo].[veteran_assessment]
 FOR UPDATE
 AS
